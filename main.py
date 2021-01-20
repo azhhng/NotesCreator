@@ -1,4 +1,5 @@
 import pdfplumber  # module used to read pdf files
+# change PDF_NAME to what PDF you want to create notes from
 PDF_NAME = "PSY290Lecture2"
 
 
