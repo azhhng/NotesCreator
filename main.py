@@ -1,6 +1,6 @@
 import pdfplumber  # module used to read pdf files
 # change PDF_NAME to what PDF you want to create notes from
-PDF_NAME = "PSY290Lecture2"
+PDF_NAME = "Lecture7"
 
 
 def _write_csv(text):
@@ -19,7 +19,7 @@ if __name__ == '__main__':
         page_content = p.extract_text()
         page_number = page_content.rfind("\n")
         page_content = page_content[:page_number].replace("•", "-").replace("", "delta ")
-        page_content = page_content.replace("Copyright © 2011 Pearson Education, Inc.", "")
+        page_content = page_content.replace("Copyright © 2011 Pearson Education, Inc.", "").replace("w/", "with ")
 
         # format new lines
         page_content_split = page_content.split("\n")
